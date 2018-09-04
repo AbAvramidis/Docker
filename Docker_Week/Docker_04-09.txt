@@ -37,3 +37,26 @@ tomcat / wildfly -> unzip on deployments folder
 
 
 Docker RUN and Entrypoint
+
+
+----------------
+gogs
+
+dockerfile:
+from centos:7
+run yum install -y wget unzip git 
+run wget
+unzip 
+entrypoint ["/gogs/gogs","web"]
+
+
+docker run --name gogs-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=gogs -d mysql:5.7
+docker run -p 3000:3000 --link gogs-mysql:gogs-mysql gogs  ## gogs-mysql the name of container
+
+
+----------------------
+
+docker build --no-cache -t gogs/ab:gogs .
+docker run --name gogs_ab -it ea504e21582b
+ docker start bf83a0708e8c
+docker exec -it gogs_ab pwd
