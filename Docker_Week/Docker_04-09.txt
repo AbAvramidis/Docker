@@ -1,0 +1,39 @@
+/home/vagrant/Docker/examples/hello_world
+
+
+Web Sources:
+------------
+https://runnable.com/docker/python/dockerize-your-python-application
+https://djangostars.com/blog/what-is-docker-and-how-to-use-it-with-python/
+
+
+
+DockerFile:
+
+From, Copy, Run (during the build process)
+Entrypoint (during the run)
+ 
+docker build -t java-abrams/ab:helloworld .
+
+[vagrant@localhost Java]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+java-abrams/ab      helloworld          cc50b83bd9fa        4 seconds ago       643 MB
+
+docker run cc50b83bd9fa
+-----------------------------------
+
+
+nodejs
+groovy
+
+jenkins 
+nexus 3
+gogs
+
+
+Jenkins:
+tomcat / wildfly -> unzip on deployments folder
+-> jenkins.war 
+
+
+Docker RUN and Entrypoint
