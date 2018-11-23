@@ -28,8 +28,8 @@ docker run -it <name> sh/ or bash
   
 # Docker monitor
 
--- docker ps 
--- docker ps -a
--- docker stop <name> or <id>
--- docker rm <name> 
+-- docker ps \
+-- docker ps -a \
+-- docker stop <name> or <id> \ 
+-- docker rm <name>  \
 -- docker rmi <name_id>
